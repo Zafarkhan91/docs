@@ -1,0 +1,107 @@
+export const jsData = [
+    // --- Console ---
+    { name: 'console.log()', category: 'JavaScript', description: 'Outputs a message to the web console.', code: 'console.log("Hello, World!");' },
+    { name: 'console.error()', category: 'JavaScript', description: 'Outputs an error message to the web console.', code: 'console.error("This is an error message.");' },
+    { name: 'console.warn()', category: 'JavaScript', description: 'Outputs a warning message to the web console.', code: 'console.warn("This is a warning.");' },
+    { name: 'console.table()', category: 'JavaScript', description: 'Displays tabular data as a table.', code: 'console.table([{ name: "John", age: 30 }, { name: "Jane", age: 25 }]);' },
+
+    // --- String Methods ---
+    { name: 'String.length', category: 'JavaScript', description: 'Returns the length of a string.', code: 'const str = "Hello";\nconsole.log(str.length); // 5' },
+    { name: 'String.slice()', category: 'JavaScript', description: 'Extracts a part of a string and returns the extracted part in a new string.', code: 'let str = "Apple, Banana, Kiwi";\nlet part = str.slice(7, 13);\nconsole.log(part); // "Banana"' },
+    { name: 'String.replace()', category: 'JavaScript', description: 'Replaces a specified value with another value in a string.', code: 'let text = "Please visit Microsoft!";\nlet newText = text.replace("Microsoft", "W3Schools");\nconsole.log(newText);' },
+    { name: 'String.toUpperCase()', category: 'JavaScript', description: 'Converts a string to uppercase letters.', code: 'let text1 = "Hello World!";\nlet text2 = text1.toUpperCase();\nconsole.log(text2);' },
+    { name: 'String.toLowerCase()', category: 'JavaScript', description: 'Converts a string to lowercase letters.', code: 'let text1 = "Hello World!";\nlet text2 = text1.toLowerCase();\nconsole.log(text2);' },
+    { name: 'String.concat()', category: 'JavaScript', description: 'Joins two or more strings.', code: 'let text1 = "Hello";\nlet text2 = "World";\nlet text3 = text1.concat(" ", text2);\nconsole.log(text3);' },
+    { name: 'String.trim()', category: 'JavaScript', description: 'Removes whitespace from both sides of a string.', code: 'let text = "   Hello World!   ";\nconsole.log(text.trim());' },
+    { name: 'String.split()', category: 'JavaScript', description: 'Splits a string into an array of substrings.', code: 'let text = "a,b,c,d,e";\nconst myArray = text.split(",");\nconsole.log(myArray);' },
+    { name: 'String.indexOf()', category: 'JavaScript', description: 'Returns the index of the first occurrence of a specified text in a string.', code: 'let str = "Please locate where locate occurs!";\nconsole.log(str.indexOf("locate")); // 7' },
+    { name: 'String.includes()', category: 'JavaScript', description: 'Determines whether a string contains the characters of a specified string.', code: 'let text = "Hello world, welcome to the universe.";\nlet result = text.includes("world");\nconsole.log(result); // true' },
+    { name: 'String.startsWith()', category: 'JavaScript', description: 'Checks if a string starts with a specified string.', code: 'let text = "Hello world";\nconsole.log(text.startsWith("Hello")); // true' },
+    { name: 'String.endsWith()', category: 'JavaScript', description: 'Checks if a string ends with a specified string.', code: 'let text = "John Doe";\nconsole.log(text.endsWith("Doe")); // true' },
+
+    // --- Array Methods ---
+    { name: 'Array.length', category: 'JavaScript', description: 'Sets or returns the number of elements in an array.', code: 'const fruits = ["Banana", "Orange", "Apple"];\nconsole.log(fruits.length); // 3' },
+    { name: 'Array.push()', category: 'JavaScript', description: 'Adds a new element to an array (at the end).', code: 'const fruits = ["Banana", "Orange"];\nfruits.push("Kiwi");\nconsole.log(fruits);' },
+    { name: 'Array.pop()', category: 'JavaScript', description: 'Removes the last element from an array.', code: 'const fruits = ["Banana", "Orange", "Apple"];\nfruits.pop();\nconsole.log(fruits);' },
+    { name: 'Array.shift()', category: 'JavaScript', description: 'Removes the first array element.', code: 'const fruits = ["Banana", "Orange"];\nfruits.shift();\nconsole.log(fruits);' },
+    { name: 'Array.unshift()', category: 'JavaScript', description: 'Adds a new element to an array (at the beginning).', code: 'const fruits = ["Banana", "Orange"];\nfruits.unshift("Lemon");\nconsole.log(fruits);' },
+    { name: 'Array.forEach()', category: 'JavaScript', description: 'Calls a function (a callback function) once for each array element.', code: 'const numbers = [45, 4, 9, 16, 25];\nnumbers.forEach(num => console.log(num));' },
+    { name: 'Array.map()', category: 'JavaScript', description: 'Creates a new array by performing a function on each array element.', code: 'const numbers1 = [45, 4, 9, 16, 25];\nconst numbers2 = numbers1.map(x => x * 2);\nconsole.log(numbers2);' },
+    { name: 'Array.filter()', category: 'JavaScript', description: 'Creates a new array with all elements that pass the test implemented by the provided function.', code: 'const ages = [32, 33, 16, 40];\nconst result = ages.filter(age => age >= 18);\nconsole.log(result);' },
+    { name: 'Array.reduce()', category: 'JavaScript', description: 'Runs a function on each array element to produce (reduce it to) a single value.', code: 'const numbers = [45, 4, 9, 16, 25];\nlet sum = numbers.reduce((total, value) => total + value, 0);\nconsole.log(sum);' },
+    { name: 'Array.find()', category: 'JavaScript', description: 'Returns the value of the first element in an array that pass a test.', code: 'const ages = [3, 10, 18, 20];\nlet found = ages.find(age => age > 18);\nconsole.log(found); // 20' },
+    { name: 'Array.findIndex()', category: 'JavaScript', description: 'Returns the index of the first element in an array that passes a test.', code: 'const ages = [3, 10, 18, 20];\nlet index = ages.findIndex(age => age > 18);\nconsole.log(index); // 3' },
+    { name: 'Array.sort()', category: 'JavaScript', description: 'Sorts the elements of an array.', code: 'const fruits = ["Banana", "Orange", "Apple"];\nfruits.sort();\nconsole.log(fruits);' },
+    { name: 'Array.slice()', category: 'JavaScript', description: 'Slices out a piece of an array into a new array.', code: 'const fruits = ["Banana", "Orange", "Lemon", "Apple"];\nconst citrus = fruits.slice(1, 3);\nconsole.log(citrus);' },
+    { name: 'Array.splice()', category: 'JavaScript', description: 'Adds/Removes items to/from an array.', code: 'const fruits = ["Banana", "Orange", "Apple"];\nfruits.splice(2, 0, "Lemon", "Kiwi");\nconsole.log(fruits);' },
+    { name: 'Array.join()', category: 'JavaScript', description: 'Joins all elements of an array into a string.', code: 'const fruits = ["Banana", "Orange", "Apple"];\nlet text = fruits.join(" and ");\nconsole.log(text);' },
+    { name: 'Array.isArray()', category: 'JavaScript', description: 'Checks whether an object is an array.', code: 'let fruit = ["Apple"];\nconsole.log(Array.isArray(fruit)); // true' },
+    { name: 'Array.from()', category: 'JavaScript', description: 'Creates an array from a string or other iterable.', code: 'const myArr = Array.from("ABCDEFG");\nconsole.log(myArr);' },
+
+    // --- Number & Math ---
+    { name: 'Number.toFixed()', category: 'JavaScript', description: 'Returns a string, with the number written with a specified number of decimals.', code: 'let num = 5.56789;\nconsole.log(num.toFixed(2)); // "5.57"' },
+    { name: 'parseInt()', category: 'JavaScript', description: 'Parses a string and returns a whole number.', code: 'console.log(parseInt("10.33")); // 10' },
+    { name: 'parseFloat()', category: 'JavaScript', description: 'Parses a string and returns a floating-point number.', code: 'console.log(parseFloat("10.33")); // 10.33' },
+    { name: 'isNaN()', category: 'JavaScript', description: 'Determines whether a value is an illegal number (Not-a-Number).', code: 'console.log(isNaN("Hello")); // true' },
+    { name: 'Math.random()', category: 'JavaScript', description: 'Returns a random number between 0 (inclusive), and 1 (exclusive).', code: 'console.log(Math.random());' },
+    { name: 'Math.floor()', category: 'JavaScript', description: 'Rounds a number DOWN to the nearest integer.', code: 'console.log(Math.floor(4.7)); // 4' },
+    { name: 'Math.ceil()', category: 'JavaScript', description: 'Rounds a number UP to the nearest integer.', code: 'console.log(Math.ceil(4.2)); // 5' },
+    { name: 'Math.round()', category: 'JavaScript', description: 'Rounds a number to the nearest integer.', code: 'console.log(Math.round(4.5)); // 5' },
+    { name: 'Math.max()', category: 'JavaScript', description: 'Returns the number with the highest value.', code: 'console.log(Math.max(0, 150, 30, 20, -8)); // 150' },
+    { name: 'Math.min()', category: 'JavaScript', description: 'Returns the number with the lowest value.', code: 'console.log(Math.min(0, 150, 30, 20, -8)); // -8' },
+
+    // --- DOM Manipulation ---
+    { name: 'getElementById()', category: 'JavaScript', description: 'Finds an element by element id.', code: '// HTML: <div id="myDiv"></div>\nconst element = document.getElementById("myDiv");\nelement.innerHTML = "Hello";' },
+    { name: 'querySelector()', category: 'JavaScript', description: 'Returns the first element that matches a specified CSS selector(s).', code: '// HTML: <p class="intro"></p>\nconst element = document.querySelector(".intro");' },
+    { name: 'querySelectorAll()', category: 'JavaScript', description: 'Returns a static NodeList containing all elements that match a specified CSS selector.', code: '// HTML: <p>Hello</p><p>World</p>\nconst pElements = document.querySelectorAll("p");' },
+    { name: 'createElement()', category: 'JavaScript', description: 'Creates an element node.', code: 'const newDiv = document.createElement("div");' },
+    { name: 'appendChild()', category: 'JavaScript', description: 'Appends a node as the last child of a node.', code: 'const newP = document.createElement("p");\ndocument.body.appendChild(newP);' },
+    { name: 'removeChild()', category: 'JavaScript', description: 'Removes a child node from the DOM.', code: 'const parent = document.getElementById("div1");\nconst child = document.getElementById("p1");\nparent.removeChild(child);' },
+    { name: '.innerHTML', category: 'JavaScript', description: 'Sets or returns the HTML content of an element.', code: 'const element = document.getElementById("myDiv");\nelement.innerHTML = "<b>New content</b>";' },
+    { name: '.textContent', category: 'JavaScript', description: 'Sets or returns the text content of a node and its descendants.', code: 'const element = document.getElementById("myDiv");\nelement.textContent = "New content";' },
+    { name: '.setAttribute()', category: 'JavaScript', description: 'Sets the value of an attribute on the specified element.', code: 'document.getElementById("myImg").setAttribute("src", "new_image.jpg");' },
+    { name: '.getAttribute()', category: 'JavaScript', description: 'Returns the value of a specified attribute on the element.', code: 'let src = document.getElementById("myImg").getAttribute("src");' },
+    { name: '.style', category: 'JavaScript', description: 'An object that represents the inline style of an element.', code: 'document.getElementById("p1").style.color = "blue";' },
+    { name: 'classList.add()', category: 'JavaScript', description: 'Adds one or more class names to an element.', code: 'document.getElementById("myDiv").classList.add("myStyle");' },
+    { name: 'classList.remove()', category: 'JavaScript', description: 'Removes one or more class names from an element.', code: 'document.getElementById("myDiv").classList.remove("myStyle");' },
+    { name: 'classList.toggle()', category: 'JavaScript', description: 'Toggles a class name for an element.', code: 'document.getElementById("myDiv").classList.toggle("myStyle");' },
+
+    // --- Events ---
+    { name: 'addEventListener()', category: 'JavaScript', description: 'Attaches an event handler to an element.', code: 'document.getElementById("myBtn").addEventListener("click", () => {\n  alert("Hello World!");\n});' },
+    { name: 'removeEventListener()', category: 'JavaScript', description: 'Removes an event handler that has been attached with addEventListener().', code: 'const btn = document.getElementById("myBtn");\nfunction myFunction() { alert("Hi!"); }\nbtn.addEventListener("click", myFunction);\nbtn.removeEventListener("click", myFunction);' },
+    { name: 'Event: click', category: 'JavaScript', description: 'Fires when the user clicks on an element.', code: 'element.addEventListener("click", event => console.log("Clicked!"))' },
+    { name: 'Event: mouseover', category: 'JavaScript', description: 'Fires when the mouse pointer is moved onto an element.', code: 'element.addEventListener("mouseover", event => console.log("Mouse over!"))' },
+    { name: 'Event: keydown', category: 'JavaScript', description: 'Fires when a key is pressed down.', code: 'window.addEventListener("keydown", event => console.log(event.key));' },
+    { name: 'Event: submit', category: 'JavaScript', description: 'Fires when a form is submitted.', code: 'form.addEventListener("submit", event => {\n  event.preventDefault();\n  console.log("Form submitted!");\n});' },
+    { name: 'Event: load', category: 'JavaScript', description: 'Fires when a resource and its dependent resources have finished loading.', code: 'window.addEventListener("load", event => console.log("Page is fully loaded."));' },
+
+    // --- Asynchronous JavaScript ---
+    { name: 'setTimeout()', category: 'JavaScript', description: 'Calls a function or evaluates an expression after a specified number of milliseconds.', code: 'setTimeout(() => {\n  console.log("Delayed for 1 second.");\n}, 1000);' },
+    { name: 'setInterval()', category: 'JavaScript', description: 'Calls a function or evaluates an expression at specified intervals (in milliseconds).', code: 'setInterval(() => {\n  console.log("I am logging every 2 seconds");\n}, 2000);' },
+    { name: 'clearTimeout()', category: 'JavaScript', description: 'Clears a timer set with setTimeout().', code: 'const myTimeout = setTimeout(myGreeting, 5000);\nclearTimeout(myTimeout);' },
+    { name: 'clearInterval()', category: 'JavaScript', description: 'Clears a timer set with setInterval().', code: 'const myInterval = setInterval(myTimer, 1000);\nclearInterval(myInterval);' },
+    { name: 'Promise', category: 'JavaScript', description: 'An object representing the eventual completion or failure of an asynchronous operation.', code: 'const myPromise = new Promise((resolve, reject) => {\n  let success = true;\n  if (success) {\n    resolve("Success!");\n  } else {\n    reject("Failure.");\n  }\n});' },
+    { name: 'async/await', category: 'JavaScript', description: 'A way to work with promises in a more comfortable, synchronous-looking way.', code: 'async function myFunction() {\n  let promise = new Promise(resolve => setTimeout(() => resolve("done!"), 1000));\n  let result = await promise;\n  console.log(result);\n}' },
+    { name: 'fetch()', category: 'JavaScript', description: 'A modern interface for fetching resources (e.g., across the network).', code: 'fetch("https://api.github.com/users/github")\n  .then(response => response.json())\n  .then(data => console.log(data));' },
+
+    // --- JSON ---
+    { name: 'JSON.stringify()', category: 'JavaScript', description: 'Converts a JavaScript object or value to a JSON string.', code: 'const obj = { name: "John", age: 30 };\nconst myJSON = JSON.stringify(obj);\nconsole.log(myJSON);' },
+    { name: 'JSON.parse()', category: 'JavaScript', description: 'Parses a JSON string, constructing the JavaScript value or object described by the string.', code: 'const json = \'{"name":"John", "age":30}\';\nconst obj = JSON.parse(json);\nconsole.log(obj.name);' },
+
+    // --- Web Storage ---
+    { name: 'localStorage.setItem()', category: 'JavaScript', description: 'Stores data with no expiration date.', code: 'localStorage.setItem("lastname", "Smith");' },
+    { name: 'localStorage.getItem()', category: 'JavaScript', description: 'Retrieves stored data.', code: 'let lastname = localStorage.getItem("lastname");\nconsole.log(lastname);' },
+    { name: 'localStorage.removeItem()', category: 'JavaScript', description: 'Removes a stored item.', code: 'localStorage.removeItem("lastname");' },
+    { name: 'sessionStorage.setItem()', category: 'JavaScript', description: 'Stores data for one session.', code: 'sessionStorage.setItem("username", "JohnDoe");' },
+
+    // --- Object Methods ---
+    { name: 'Object.keys()', category: 'JavaScript', description: 'Returns an array of a given object\'s own enumerable property names.', code: 'const person = { fname:"John", lname:"Doe", age:25 };\nconsole.log(Object.keys(person));' },
+    { name: 'Object.values()', category: 'JavaScript', description: 'Returns an array of a given object\'s own enumerable property values.', code: 'const person = { fname:"John", lname:"Doe", age:25 };\nconsole.log(Object.values(person));' },
+    { name: 'Object.entries()', category: 'JavaScript', description: 'Returns an array of a given object\'s own enumerable string-keyed property [key, value] pairs.', code: 'const person = { fname:"John", lname:"Doe", age:25 };\nconsole.log(Object.entries(person));' },
+    { name: 'Object.assign()', category: 'JavaScript', description: 'Copies all enumerable own properties from one or more source objects to a target object.', code: 'const target = { a: 1, b: 2 };\nconst source = { b: 4, c: 5 };\nconst returnedTarget = Object.assign(target, source);\nconsole.log(returnedTarget);' },
+    { name: 'Object.freeze()', category: 'JavaScript', description: 'Freezes an object. A frozen object can no longer be changed.', code: 'const obj = { prop: 42 };\nObject.freeze(obj);\nobj.prop = 33; // Throws an error in strict mode\nconsole.log(obj.prop);' },
+    { name: '.hasOwnProperty()', category: 'JavaScript', description: 'Returns a boolean indicating whether the object has the specified property as its own property.', code: 'const object1 = { prop: \'exists\' };\nconsole.log(object1.hasOwnProperty(\'prop\')); // true' }
+];
+// This is a great start, well over 100 entries. I will add more if needed later.
+// I will now move to the final data file: components.js
+export { jsData };

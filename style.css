@@ -1,0 +1,417 @@
+/* -------------------- */
+/* --- Base Styles --- */
+/* -------------------- */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --background-color: #ecf0f1;
+    --text-color: #333;
+    --sidebar-width: 280px;
+    --header-height: 60px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* Prevent body scroll */
+}
+
+/* -------------------- */
+/* --- Header --- */
+/* -------------------- */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#add-note-btn, #export-btn {
+    padding: 8px 16px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+#add-note-btn:hover, #export-btn:hover {
+    background-color: #5dade2;
+}
+
+.search-container {
+    position: relative;
+}
+
+#search-bar {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: white;
+    width: 250px;
+    transition: all 0.3s ease;
+}
+
+#search-bar::placeholder {
+    color: #bdc3c7;
+}
+
+#search-bar:focus {
+    outline: none;
+    background-color: white;
+    color: var(--text-color);
+    border-color: var(--accent-color);
+}
+
+/* -------------------- */
+/* --- Main Layout --- */
+/* -------------------- */
+.container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* -------------------- */
+/* --- Sidebar --- */
+/* -------------------- */
+#sidebar {
+    width: var(--sidebar-width);
+    background-color: white;
+    padding: 20px 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+#sidebar .category > h3 {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+#sidebar .category > h3:hover {
+    background-color: #f8f9fa;
+}
+
+#sidebar .category > h3::after {
+    content: '▶';
+    font-size: 0.8em;
+    transition: transform 0.2s ease;
+}
+
+#sidebar .category.open > h3::after {
+    transform: rotate(90deg);
+}
+
+#sidebar .category-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+#sidebar .category.open .category-items {
+    max-height: 1000px; /* Arbitrary large number */
+    transition: max-height 0.5s ease-in;
+}
+
+#sidebar .category-items li {
+    padding: 8px 20px 8px 30px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+#sidebar .category-items li:hover, #sidebar .category-items li.active {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* -------------------- */
+/* --- Main Content --- */
+/* -------------------- */
+#main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-placeholder {
+    text-align: center;
+    margin-top: 100px;
+    color: #7f8c8d;
+}
+
+.content-display {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#content-title {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+#content-description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+#editor-container {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 200px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.preview-container {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-container h3 {
+    margin: 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+}
+
+#preview-frame {
+    flex: 1;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 10px;
+    transition: background-color 0.2s ease;
+}
+
+#run-btn {
+    background-color: #27ae60;
+}
+#run-btn:hover {
+    background-color: #2ecc71;
+}
+
+#save-btn {
+    background-color: var(--accent-color);
+}
+#save-btn:hover {
+    background-color: #5dade2;
+}
+
+/* -------------------- */
+/* --- Modal Styles --- */
+/* -------------------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px 30px 30px 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.95);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+.close-modal-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-modal-btn:hover,
+.close-modal-btn:focus {
+    color: black;
+}
+
+#add-note-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+#add-note-form input[type=text],
+#add-note-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+#add-note-form input[disabled] {
+    background-color: #eee;
+    color: #777;
+}
+
+#add-note-form button {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 1.1rem;
+}
+#add-note-form button:hover {
+    background-color: #2ecc71;
+}
+
+/* -------------------------- */
+/* --- Hamburger & Mobile --- */
+/* -------------------------- */
+.hamburger {
+    display: none; /* Hidden by default on desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001; /* Above header but below modal */
+}
+
+.hamburger span {
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    header {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    header h1 {
+        display: none; /* Hide title on small screens */
+    }
+
+    .header-actions {
+        margin-left: auto; /* Push actions to the right */
+    }
+
+    #search-bar {
+        width: 120px;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: var(--sidebar-width);
+        max-width: 80%; /* Ensure it does not take full screen */
+        height: calc(100% - var(--header-height));
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+        padding-top: 20px;
+        border-right: 1px solid #ddd;
+        /* unset properties from desktop */
+        max-height: none;
+        border-bottom: none;
+    }
+
+    #sidebar.open {
+        transform: translateX(0);
+    }
+
+    #main-content {
+        height: 100%;
+    }
+}

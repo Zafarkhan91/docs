@@ -1,0 +1,211 @@
+export const cssData = [
+    // --- Layout ---
+    { name: 'display', category: 'CSS', description: 'Sets an element\'s inner and outer display types.', code: 'div { display: block; }\nspan { display: inline; }\n.flex-container { display: flex; }' },
+    { name: 'position', category: 'CSS', description: 'Specifies the type of positioning method used for an element (static, relative, absolute, fixed, or sticky).', code: '.absolute { position: absolute; top: 10px; left: 10px; }' },
+    { name: 'top, right, bottom, left', category: 'CSS', description: 'Specifies the position of a positioned element.', code: '.box { position: absolute; top: 0; left: 20px; }' },
+    { name: 'float', category: 'CSS', description: 'Places an element on the left or right side of its container, allowing text and inline elements to wrap around it.', code: 'img { float: left; }' },
+    { name: 'clear', category: 'CSS', description: 'Controls the flow of content before/after an element with the float property.', code: 'footer { clear: both; }' },
+    { name: 'z-index', category: 'CSS', description: 'Specifies the stack order of a positioned element.', code: '.top-layer { position: absolute; z-index: 10; }' },
+    { name: 'overflow', category: 'CSS', description: 'Specifies what should happen if content overflows an element\'s box.', code: '.scrollable { overflow: auto; height: 100px; }' },
+    { name: 'visibility', category: 'CSS', description: 'Specifies whether an element is visible or hidden.', code: '.hidden { visibility: hidden; }' },
+
+    // --- Box Model ---
+    { name: 'width', category: 'CSS', description: 'Sets the width of an element.', code: 'div { width: 300px; }' },
+    { name: 'height', category: 'CSS', description: 'Sets the height of an element.', code: 'div { height: 200px; }' },
+    { name: 'margin', category: 'CSS', description: 'Sets the margin area on all four sides of an element.', code: 'div { margin: 20px; }' },
+    { name: 'padding', category: 'CSS', description: 'Sets the padding area on all four sides of an element.', code: 'div { padding: 20px; }' },
+    { name: 'border', category: 'CSS', description: 'A shorthand property for setting the individual border properties.', code: 'div { border: 1px solid black; }' },
+    { name: 'box-sizing', category: 'CSS', description: 'Tells the browser what the sizing properties (width and height) should include.', code: 'div { box-sizing: border-box; }' },
+    { name: 'min-width', category: 'CSS', description: 'Sets the minimum width of an element.', code: 'div { min-width: 100px; }' },
+    { name: 'max-width', category: 'CSS', description: 'Sets the maximum width of an element.', code: 'div { max-width: 800px; }' },
+    { name: 'min-height', category: 'CSS', description: 'Sets the minimum height of an element.', code: 'div { min-height: 50px; }' },
+    { name: 'max-height', category: 'CSS', description: 'Sets the maximum height of an element.', code: 'div { max-height: 400px; }' },
+
+    // --- Flexbox ---
+    { name: 'flex-direction', category: 'CSS', description: 'Establishes the main-axis, thus defining the direction flex items are placed in the flex container.', code: '.container { flex-direction: row | column; }' },
+    { name: 'flex-wrap', category: 'CSS', description: 'Allows flex items to wrap onto multiple lines or columns.', code: '.container { flex-wrap: nowrap | wrap; }' },
+    { name: 'justify-content', category: 'CSS', description: 'Defines the alignment along the main axis.', code: '.container { justify-content: center; }' },
+    { name: 'align-items', category: 'CSS', description: 'Defines the default behavior for how flex items are laid out along the cross axis.', code: '.container { align-items: center; }' },
+    { name: 'align-content', category: 'CSS', description: 'Aligns a flex container\'s lines within when there is extra space in the cross-axis.', code: '.container { align-content: space-between; }' },
+    { name: 'flex-grow', category: 'CSS', description: 'Defines the ability for a flex item to grow if necessary.', code: '.item { flex-grow: 1; }' },
+    { name: 'flex-shrink', category: 'CSS', description: 'Defines the ability for a flex item to shrink if necessary.', code: '.item { flex-shrink: 1; }' },
+    { name: 'flex-basis', category: 'CSS', description: 'Defines the default size of an element before the remaining space is distributed.', code: '.item { flex-basis: 200px; }' },
+    { name: 'flex', category: 'CSS', description: 'A shorthand for flex-grow, flex-shrink and flex-basis.', code: '.item { flex: 1 1 200px; }' },
+    { name: 'order', category: 'CSS', description: 'Controls the order in which flex items appear in the flex container.', code: '.item-1 { order: 2; }\n.item-2 { order: 1; }' },
+
+    // --- Grid ---
+    { name: 'grid-template-columns', category: 'CSS', description: 'Defines the columns of the grid.', code: '.container { grid-template-columns: 1fr 1fr 1fr; }' },
+    { name: 'grid-template-rows', category: 'CSS', description: 'Defines the rows of the grid.', code: '.container { grid-template-rows: auto 1fr auto; }' },
+    { name: 'grid-gap', category: 'CSS', description: 'A shorthand for grid-row-gap and grid-column-gap.', code: '.container { grid-gap: 10px; }' },
+    { name: 'grid-column', category: 'CSS', description: 'Specifies a grid item’s size and location in a grid layout.', code: '.item-a { grid-column: 1 / 3; }' },
+    { name: 'grid-row', category: 'CSS', description: 'Specifies a grid item’s size and location in a grid layout.', code: '.item-a { grid-row: 2 / 4; }' },
+    { name: 'grid-area', category: 'CSS', description: 'A shorthand for grid-row-start, grid-column-start, grid-row-end and grid-column-end.', code: '.item-a { grid-area: 1 / 2 / 3 / 4; }' },
+    { name: 'justify-items', category: 'CSS', description: 'Aligns grid items along the inline (row) axis.', code: '.container { justify-items: center; }' },
+    { name: 'align-items', category: 'CSS', description: 'Aligns grid items along the block (column) axis.', code: '.container { align-items: center; }' },
+
+    // --- Typography ---
+    { name: 'color', category: 'CSS', description: 'Sets the color of text.', code: 'p { color: #333333; }' },
+    { name: 'font-family', category: 'CSS', description: 'Specifies the font for an element.', code: 'body { font-family: "Segoe UI", Tahoma, sans-serif; }' },
+    { name: 'font-size', category: 'CSS', description: 'Sets the size of the font.', code: 'p { font-size: 16px; }' },
+    { name: 'font-weight', category: 'CSS', description: 'Sets how thick or thin characters in text should be displayed.', code: 'h1 { font-weight: bold; }' },
+    { name: 'font-style', category: 'CSS', description: 'Sets the style of the font.', code: '.emphasis { font-style: italic; }' },
+    { name: 'line-height', category: 'CSS', description: 'Specifies the height of a line.', code: 'p { line-height: 1.5; }' },
+    { name: 'text-align', category: 'CSS', description: 'Specifies the horizontal alignment of text.', code: 'h1 { text-align: center; }' },
+    { name: 'text-decoration', category: 'CSS', description: 'Specifies the decoration added to text.', code: 'a { text-decoration: none; }' },
+    { name: 'text-transform', category: 'CSS', description: 'Controls the capitalization of text.', code: 'h1 { text-transform: uppercase; }' },
+    { name: 'letter-spacing', category: 'CSS', description: 'Increases or decreases the space between characters in a text.', code: 'h1 { letter-spacing: 2px; }' },
+    { name: 'word-spacing', category: 'CSS', description: 'Increases or decreases the white space between words.', code: 'p { word-spacing: 4px; }' },
+    { name: 'white-space', category: 'CSS', description: 'Specifies how white-space inside an element is handled.', code: 'pre { white-space: pre-wrap; }' },
+    { name: 'text-shadow', category: 'CSS', description: 'Adds shadow to text.', code: 'h1 { text-shadow: 2px 2px 5px grey; }' },
+
+    // --- Backgrounds ---
+    { name: 'background-color', category: 'CSS', description: 'Sets the background color of an element.', code: 'body { background-color: #f0f0f0; }' },
+    { name: 'background-image', category: 'CSS', description: 'Sets one or more background images for an element.', code: 'body { background-image: url("bg.jpg"); }' },
+    { name: 'background-repeat', category: 'CSS', description: 'Sets if/how a background image will be repeated.', code: 'body { background-repeat: no-repeat; }' },
+    { name: 'background-position', category: 'CSS', description: 'Sets the starting position of a background image.', code: 'body { background-position: center; }' },
+    { name: 'background-size', category: 'CSS', description: 'Specifies the size of the background images.', code: 'body { background-size: cover; }' },
+    { name: 'background-attachment', category: 'CSS', description: 'Sets whether a background image scrolls with the rest of the page, or is fixed.', code: 'body { background-attachment: fixed; }' },
+    { name: 'background', category: 'CSS', description: 'A shorthand property for all the background properties.', code: 'body { background: #ffffff url("img.png") no-repeat right top; }' },
+
+    // --- Borders ---
+    { name: 'border-width', category: 'CSS', description: 'Sets the width of an element\'s four borders.', code: 'div { border-width: 2px; }' },
+    { name: 'border-style', category: 'CSS', description: 'Sets the style of an element\'s four borders.', code: 'div { border-style: dotted; }' },
+    { name: 'border-color', category: 'CSS', description: 'Sets the color of an element\'s four borders.', code: 'div { border-color: #ff0000; }' },
+    { name: 'border-radius', category: 'CSS', description: 'Rounds the corners of an element\'s outer border edge.', code: 'div { border-radius: 10px; }' },
+
+    // --- Transitions & Animations ---
+    { name: 'transition', category: 'CSS', description: 'A shorthand property for setting the four transition properties.', code: 'div { transition: width 2s; }' },
+    { name: 'transition-property', category: 'CSS', description: 'Specifies the name of the CSS property the transition effect is for.', code: 'div { transition-property: width; }' },
+    { name: 'transition-duration', category: 'CSS', description: 'Specifies how many seconds or milliseconds a transition effect takes to complete.', code: 'div { transition-duration: 2s; }' },
+    { name: 'transition-timing-function', category: 'CSS', description: 'Specifies the speed curve of the transition effect.', code: 'div { transition-timing-function: ease-in-out; }' },
+    { name: 'transition-delay', category: 'CSS', description: 'Specifies a delay (in seconds) for the transition effect.', code: 'div { transition-delay: 1s; }' },
+    { name: 'animation', category: 'CSS', description: 'A shorthand property for all the animation properties.', code: '@keyframes example { from {background-color: red;} to {background-color: yellow;} }\ndiv { animation: example 5s; }' },
+    { name: 'animation-name', category: 'CSS', description: 'Specifies the name of the @keyframes animation.', code: 'div { animation-name: my-animation; }' },
+    { name: 'animation-duration', category: 'CSS', description: 'Specifies how long an animation should take to complete one cycle.', code: 'div { animation-duration: 4s; }' },
+    { name: 'animation-iteration-count', category: 'CSS', description: 'Specifies the number of times an animation should be played.', code: 'div { animation-iteration-count: infinite; }' },
+
+    // --- Transforms ---
+    { name: 'transform', category: 'CSS', description: 'Applies a 2D or 3D transformation to an element.', code: 'div { transform: rotate(20deg); }' },
+    { name: 'transform-origin', category: 'CSS', description: 'Allows you to change the position of transformed elements.', code: 'div { transform-origin: 20% 40%; }' },
+    { name: 'transform-style', category: 'CSS', description: 'Specifies how nested elements are rendered in 3D space.', code: '.container { transform-style: preserve-3d; }' },
+
+    // --- Miscellaneous ---
+    { name: 'opacity', category: 'CSS', description: 'Sets the opacity level for an element.', code: 'img { opacity: 0.5; }' },
+    { name: 'box-shadow', category: 'CSS', description: 'Attaches one or more shadows to an element.', code: 'div { box-shadow: 10px 5px 5px black; }' },
+    { name: 'cursor', category: 'CSS', description: 'Specifies the mouse cursor to be displayed when pointing over an element.', code: 'button { cursor: pointer; }' },
+    { name: 'list-style-type', category: 'CSS', description: 'Specifies the type of list-item marker.', code: 'ul { list-style-type: square; }' },
+    { name: 'user-select', category: 'CSS', description: 'Controls whether the user can select text.', code: '.noselect { user-select: none; }' },
+    { name: 'clip-path', category: 'CSS', description: 'Creates a clipping region that sets what part of an element is visible.', code: '.circle { clip-path: circle(50%); }' },
+    { name: 'filter', category: 'CSS', description: 'Defines effects (e.g., blurring or color shifting) on an element before the element is displayed.', code: 'img { filter: grayscale(100%); }' },
+    { name: 'object-fit', category: 'CSS', description: 'Specifies how the contents of a replaced element should be fitted to the container\'s height and width.', code: 'img { width: 200px; height: 200px; object-fit: cover; }' },
+    { name: 'outline', category: 'CSS', description: 'An outline is a line drawn around elements, outside the borders, to make the element "stand out".', code: 'input:focus { outline: 2px solid blue; }' },
+    { name: 'resize', category: 'CSS', description: 'Defines if (and how) an element is resizable by the user.', code: 'textarea { resize: vertical; }' }
+];
+// This is a foundational list. I will add more properties to reach 150+ in subsequent steps.
+// For example, more specific properties for border-*, margin-*, padding-*, font-*, etc.
+// And more values for properties like `position`.
+// And pseudo-classes/elements.
+// But this is a very strong start.
+// I will add more in the next step.
+// For now, I will move to the next file.
+// I will come back to this file later.
+// Let's add more properties right now to get closer to the 150 mark.
+const moreCssData = [
+    { name: 'align-self', category: 'CSS', description: 'Specifies the alignment for a single flex item, overriding the container\'s align-items property.', code: '.item { align-self: flex-start; }' },
+    { name: 'backface-visibility', category: 'CSS', description: 'Defines whether or not the back face of an element should be visible when facing the user.', code: '.card { backface-visibility: hidden; }' },
+    { name: 'border-collapse', category: 'CSS', description: 'Sets whether table borders should collapse into a single border or be separated.', code: 'table { border-collapse: collapse; }' },
+    { name: 'border-spacing', category: 'CSS', description: 'Sets the distance between the borders of adjacent cells in a table.', code: 'table { border-spacing: 10px; }' },
+    { name: 'caption-side', category: 'CSS', description: 'Specifies the placement of a table caption.', code: 'table { caption-side: bottom; }' },
+    { name: 'empty-cells', category: 'CSS', description: 'Sets whether or not to display borders and background on empty cells in a table.', code: 'table { empty-cells: hide; }' },
+    { name: 'table-layout', category: 'CSS', description: 'Defines the algorithm used to lay out table cells, rows, and columns.', code: 'table { table-layout: fixed; }' },
+    { name: 'text-overflow', category: 'CSS', description: 'Specifies how overflowed content that is not displayed should be signaled to the user.', code: '.ellipsis { text-overflow: ellipsis; }' },
+    { name: 'word-break', category: 'CSS', description: 'Specifies how words should break when reaching the end of a line.', code: 'p { word-break: break-all; }' },
+    { name: 'word-wrap', category: 'CSS', description: 'Alias for overflow-wrap. Specifies whether or not the browser may break lines within words in order to prevent overflow.', code: 'p { word-wrap: break-word; }' },
+    { name: 'writing-mode', category: 'CSS', description: 'Sets whether lines of text are laid out horizontally or vertically.', code: '.vertical-text { writing-mode: vertical-rl; }' },
+    { name: 'perspective', category: 'CSS', description: 'Gives a 3D-positioned element some perspective.', code: '.container { perspective: 100px; }' },
+    { name: 'perspective-origin', category: 'CSS', description: 'Defines at which position the user is looking at the 3D-positioned element.', code: '.container { perspective-origin: top left; }' },
+    { name: 'content', category: 'CSS', description: 'Used with the ::before and ::after pseudo-elements, to insert generated content.', code: 'q::before { content: "«"; }' },
+    { name: 'quotes', category: 'CSS', description: 'Sets the type of quotation marks for embedded quotations.', code: 'q { quotes: "«" "»"; }' },
+    { name: 'counter-reset', category: 'CSS', description: 'Creates or resets one or more CSS counters.', code: 'body { counter-reset: section; }' },
+    { name: 'counter-increment', category: 'CSS', description: 'Increments one or more CSS counters by a given value.', code: 'h2::before { counter-increment: section; content: "Section " counter(section) ": "; }' },
+    { name: 'list-style', category: 'CSS', description: 'A shorthand for list-style-type, list-style-position, and list-style-image.', code: 'ul { list-style: square inside url("sq.gif"); }' },
+    { name: 'list-style-position', category: 'CSS', description: 'Specifies the position of the list-item markers.', code: 'ul { list-style-position: inside; }' },
+    { name: 'list-style-image', category: 'CSS', description: 'Specifies an image as the list-item marker.', code: 'ul { list-style-image: url("marker.png"); }' },
+    { name: 'font-variant', category: 'CSS', description: 'Specifies whether or not a text should be displayed in a small-caps font.', code: 'p { font-variant: small-caps; }' },
+    { name: 'font-stretch', category: 'CSS', description: 'Selects a normal, condensed, or expanded face from a font.', code: 'p { font-stretch: ultra-expanded; }' },
+    { name: 'text-justify', category: 'CSS', description: 'Specifies the justification method of text when text-align is set to "justify".', code: 'p { text-align: justify; text-justify: inter-word; }' },
+    { name: 'text-indent', category: 'CSS', description: 'Specifies the indentation of the first line in a text-block.', code: 'p { text-indent: 50px; }' },
+    { name: 'text-decoration-line', category: 'CSS', description: 'Specifies the type of line in a text-decoration.', code: 'p { text-decoration-line: underline; }' },
+    { name: 'text-decoration-color', category: 'CSS', description: 'Specifies the color of the text-decoration.', code: 'p { text-decoration-line: underline; text-decoration-color: red; }' },
+    { name: 'text-decoration-style', category: 'CSS', description: 'Specifies the style of the line in a text-decoration.', code: 'p { text-decoration-line: underline; text-decoration-style: wavy; }' },
+    { name: 'caret-color', category: 'CSS', description: 'Specifies the color of the cursor (caret) in inputs, textareas, or any element that is editable.', code: 'input { caret-color: red; }' },
+    { name: 'background-blend-mode', category: 'CSS', description: 'Specifies the blending mode of each background layer (color and/or image).', code: 'div { background-image: url(bg.jpg); background-color: red; background-blend-mode: multiply; }' },
+    { name: 'mix-blend-mode', category: 'CSS', description: 'Specifies how an element\'s content should blend with the content of the element\'s parent and the element\'s background.', code: 'h1 { mix-blend-mode: screen; }' },
+    { name: 'isolation', category: 'CSS', description: 'Defines whether an element must create a new stacking context.', code: 'div { isolation: isolate; }' },
+    { name: 'scroll-behavior', category: 'CSS', description: 'Specifies whether to smoothly animate the scroll position, instead of a straight jump, when the user clicks on a link that targets an anchor on the same page.', code: 'html { scroll-behavior: smooth; }' },
+    { name: 'scroll-snap-type', category: 'CSS', description: 'Specifies how strictly snap points are enforced on the scroll container.', code: '.container { scroll-snap-type: y mandatory; }' },
+    { name: 'scroll-snap-align', category: 'CSS', description: 'Specifies the snap position of a snap container\'s children.', code: '.child { scroll-snap-align: start; }' },
+    { name: 'shape-outside', category: 'CSS', description: 'Defines a shape. The inline content will wrap around this shape.', code: '.float-left { float: left; shape-outside: circle(50%); }' },
+    { name: 'shape-margin', category: 'CSS', description: 'Adds a margin to a shape-outside.', code: '.float-left { shape-outside: circle(50%); shape-margin: 10px; }' },
+    { name: 'grid-auto-flow', category: 'CSS', description: 'Controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.', code: '.container { grid-auto-flow: dense; }' },
+    { name: 'grid-auto-columns', category: 'CSS', description: 'Specifies the size of any auto-generated grid columns.', code: '.container { grid-auto-columns: 100px; }' },
+    { name: 'grid-auto-rows', category: 'CSS', description: 'Specifies the size of any auto-generated grid rows.', code: '.container { grid-auto-rows: minmax(100px, auto); }' },
+    { name: 'column-count', category: 'CSS', description: 'Specifies the number of columns an element should be divided into.', code: '.newspaper { column-count: 3; }' },
+    { name: 'column-gap', category: 'CSS', description: 'Specifies the gap between the columns.', code: '.newspaper { column-gap: 40px; }' },
+    { name: 'column-rule', category: 'CSS', description: 'A shorthand property for setting all the column-rule-* properties.', code: '.newspaper { column-rule: 1px solid lightblue; }' },
+    { name: 'column-span', category: 'CSS', description: 'Specifies how many columns an element should span across.', code: 'h2 { column-span: all; }' },
+    { name: 'column-width', category: 'CSS', description: 'Specifies a suggested, optimal width for the columns.', code: '.newspaper { column-width: 100px; }' },
+    { name: 'flex-flow', category: 'CSS', description: 'A shorthand property for the flex-direction and flex-wrap properties.', code: '.container { flex-flow: row wrap; }' }
+];
+cssData.push(...moreCssData);
+// Now we have over 100 properties. I'll add more in the next pass to get to 150.
+const evenMoreCssData = [
+    { name: 'margin-top', category: 'CSS', description: 'Sets the top margin of an element.', code: 'div { margin-top: 10px; }' },
+    { name: 'margin-right', category: 'CSS', description: 'Sets the right margin of an element.', code: 'div { margin-right: 15px; }' },
+    { name: 'margin-bottom', category: 'CSS', description: 'Sets the bottom margin of an element.', code: 'div { margin-bottom: 10px; }' },
+    { name: 'margin-left', category: 'CSS', description: 'Sets the left margin of an element.', code: 'div { margin-left: 15px; }' },
+    { name: 'padding-top', category: 'CSS', description: 'Sets the top padding of an element.', code: 'div { padding-top: 20px; }' },
+    { name: 'padding-right', category: 'CSS', description: 'Sets the right padding of an element.', code: 'div { padding-right: 25px; }' },
+    { name: 'padding-bottom', category: 'CSS', description: 'Sets the bottom padding of an element.', code: 'div { padding-bottom: 20px; }' },
+    { name: 'padding-left', category: 'CSS', description: 'Sets the left padding of an element.', code: 'div { padding-left: 25px; }' },
+    { name: 'border-top', category: 'CSS', description: 'A shorthand property for setting all the properties for the top border.', code: 'div { border-top: 1px solid red; }' },
+    { name: 'border-right', category: 'CSS', description: 'A shorthand property for setting all the properties for the right border.', code: 'div { border-right: 1px solid red; }' },
+    { name: 'border-bottom', category: 'CSS', description: 'A shorthand property for setting all the properties for the bottom border.', code: 'div { border-bottom: 1px solid red; }' },
+    { name: 'border-left', category: 'CSS', description: 'A shorthand property for setting all the properties for the left border.', code: 'div { border-left: 1px solid red; }' },
+    { name: 'border-top-left-radius', category: 'CSS', description: 'Defines the radius of the top-left corner.', code: 'div { border-top-left-radius: 20px; }' },
+    { name: 'border-top-right-radius', category: 'CSS', description: 'Defines the radius of the top-right corner.', code: 'div { border-top-right-radius: 20px; }' },
+    { name: 'border-bottom-right-radius', category: 'CSS', description: 'Defines the radius of the bottom-right corner.', code: 'div { border-bottom-right-radius: 20px; }' },
+    { name: 'border-bottom-left-radius', category: 'CSS', description: 'Defines the radius of the bottom-left corner.', code: 'div { border-bottom-left-radius: 20px; }' },
+    { name: 'animation-delay', category: 'CSS', description: 'Specifies a delay for the start of an animation.', code: 'div { animation-delay: 2s; }' },
+    { name: 'animation-direction', category: 'CSS', description: 'Specifies whether an animation should be played forwards, backwards or in alternate cycles.', code: 'div { animation-direction: alternate; }' },
+    { name: 'animation-fill-mode', category: 'CSS', description: 'Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both).', code: 'div { animation-fill-mode: forwards; }' },
+    { name: 'animation-play-state', category: 'CSS', description: 'Specifies whether the animation is running or paused.', code: 'div { animation-play-state: paused; }' },
+    { name: 'animation-timing-function', category: 'CSS', description: 'Specifies the speed curve of an animation.', code: 'div { animation-timing-function: linear; }' },
+    { name: 'font', category: 'CSS', description: 'A shorthand property for font-style, font-variant, font-weight, font-size/line-height, and font-family.', code: 'p { font: italic small-caps bold 16px/1.5 Arial, sans-serif; }' },
+    { name: 'overflow-x', category: 'CSS', description: 'Specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the left and right edges.', code: '.scroll-x { overflow-x: scroll; }' },
+    { name: 'overflow-y', category: 'CSS', description: 'Specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the top and bottom edges.', code: '.scroll-y { overflow-y: scroll; }' },
+    { name: 'pointer-events', category: 'CSS', description: 'Defines whether or not an element reacts to pointer events.', code: '.disabled { pointer-events: none; }' },
+    { name: 'accent-color', category: 'CSS', description: 'Sets the accent color for user-interface controls.', code: 'input[type="checkbox"] { accent-color: red; }' },
+    { name: 'appearance', category: 'CSS', description: 'Controls the native appearance of UI controls.', code: 'button { appearance: none; }' }
+];
+cssData.push(...evenMoreCssData);
+// Now we are very close to 150. One more small push.
+const finalCssData = [
+    { name: 'background-origin', category: 'CSS', description: 'Specifies the origin position of a background image.', code: 'div { background-origin: content-box; }' },
+    { name: 'background-clip', category: 'CSS', description: 'Specifies the painting area of the background.', code: 'div { background-clip: text; }' },
+    { name: 'color-scheme', category: 'CSS', description: 'Allows an element to indicate which color schemes it can comfortably be rendered in.', code: ':root { color-scheme: light dark; }' },
+    { name: 'font-kerning', category: 'CSS', description: 'Controls the usage of the kerning information stored in a font.', code: 'p { font-kerning: normal; }' },
+    { name: 'font-optical-sizing', category: 'CSS', description: 'Allows developers to control whether browsers render text with optical sizing.', code: 'p { font-optical-sizing: auto; }' },
+    { name: 'hyphens', category: 'CSS', description: 'Specifies how to split words to improve the layout of paragraphs.', code: 'p { hyphens: auto; }' },
+    { name: 'line-break', category: 'CSS', description: 'Specifies how to break lines of text.', code: 'p { line-break: auto; }' },
+    { name: 'orphans', category: 'CSS', description: 'Specifies the minimum number of lines in a block container that must be left at the bottom of a page.', code: 'p { orphans: 3; }' },
+    { name: 'widows', category: 'CSS', description: 'Specifies the minimum number of lines in a block container that must be shown at the top of a page.', code: 'p { widows: 2; }' },
+    { name: 'text-rendering', category: 'CSS', description: 'Provides a hint to the browser about what aspects of text rendering to optimize for.', code: 'p { text-rendering: optimizeLegibility; }' },
+    { name:tame: 'text-size-adjust', category: 'CSS', description: 'Controls the text inflation algorithm used on some smartphones and tablets.', code: 'body { text-size-adjust: 100%; }' },
+    { name: 'user-zoom', category: 'CSS', description: 'Controls whether the user can change the zoom level of the document.', code: 'body { user-zoom: fixed; }' },
+    { name: 'will-change', category: 'CSS', description: 'Hints to browsers how an element is expected to change.', code: '.animating-element { will-change: transform; }' }
+];
+cssData.push(...finalCssData);
+// I think this is enough for now. It is well over 150 properties.
+// I will now move to the next file, js.js.
+export { cssData };

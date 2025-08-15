@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dev Playground & Notes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.52.2/min/vs/editor/editor.main.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <button id="hamburger-btn" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+        <h1>My Dev Playground & Notes</h1>
+    <div class="header-actions">
+        <button id="add-note-btn">+ Add Note</button>
+        <button id="export-btn">Export Notes</button>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search...">
+        </div>
+        </div>
+    </header>
+
+<div id="add-note-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal-btn">&times;</span>
+    <h2>Add a New Note</h2>
+    <form id="add-note-form">
+        <label for="note-title">Title:</label>
+        <input type="text" id="note-title" placeholder="e.g., My Custom Function" required>
+
+        <label for="note-category">Category:</label>
+        <input type="text" id="note-category" value="My Notes" disabled>
+
+        <label for="note-description">Description (Optional):</label>
+        <textarea id="note-description" rows="3"></textarea>
+
+        <label for="note-code">Code:</label>
+        <textarea id="note-code" rows="10" placeholder="<p>Your code here...</p>" required></textarea>
+
+        <button type="submit">Save Note</button>
+    </form>
+  </div>
+</div>
+
+    <div class="container">
+        <aside id="sidebar">
+            <!-- Categories will be populated here by JavaScript -->
+        </aside>
+        <main id="main-content">
+            <div class="content-placeholder">
+                <h2>Welcome!</h2>
+                <p>Select an item from the sidebar to get started.</p>
+            </div>
+            <div class="content-display" style="display: none;">
+                <h2 id="content-title"></h2>
+                <p id="content-description"></p>
+                <div id="editor-container"></div>
+                <div class="preview-container">
+                    <h3>Preview</h3>
+                    <iframe id="preview-frame"></iframe>
+                </div>
+                <div class="actions">
+                    <button id="run-btn">Run</button>
+                    <button id="save-btn">Save Note</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.52.2/min/vs/loader.js"></script>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
