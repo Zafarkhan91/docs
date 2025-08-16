@@ -1,0 +1,182 @@
+[
+    {
+        "name": "Simple Navbar",
+        "category": "Components",
+        "description": "A basic horizontal navigation bar.",
+        "code": "<style>\\n    .navbar {\\n        background-color: #333;\\n        overflow: hidden;\\n        font-family: sans-serif;\\n    }\\n    .navbar a {\\n        float: left;\\n        display: block;\\n        color: white;\\n        text-align: center;\\n        padding: 14px 20px;\\n        text-decoration: none;\\n    }\\n    .navbar a:hover {\\n        background-color: #ddd;\\n        color: black;\\n    }\\n</style>\\n\\n<div class=\"navbar\">\\n    <a href=\"#home\">Home</a>\\n    <a href=\"#news\">News</a>\\n    <a href=\"#contact\">Contact</a>\\n    <a href=\"#about\">About</a>\\n</div>"
+    },
+    {
+        "name": "Responsive Navbar",
+        "category": "Components",
+        "description": "A navigation bar that collapses into a hamburger menu on smaller screens.",
+        "code": "<style>\\n    .responsive-nav {\\n        background-color: #333;\\n        overflow: hidden;\\n        position: relative;\\n        font-family: sans-serif;\\n    }\\n    .responsive-nav a {\\n        color: white;\\n        padding: 14px 16px;\\n        text-decoration: none;\\n        font-size: 17px;\\n        display: block;\\n    }\\n    .responsive-nav a.icon {\\n        background: black;\\n        display: block;\\n        position: absolute;\\n        right: 0;\\n        top: 0;\\n    }\\n    .responsive-nav a:not(.icon) {\\n        display: none;\\n    }\\n    .responsive-nav.responsive a:not(.icon) {\\n        display: block;\\n        text-align: left;\\n    }\\n    .responsive-nav.responsive {\\n        position: relative;\\n    }\\n    .responsive-nav.responsive a.icon {\\n        position: absolute;\\n        right: 0;\\n        top: 0;\\n    }\\n</style>\\n<script>\\n    function toggleNav() {\\n        var x = document.getElementById(\"myTopnav\");\\n        if (x.className === \"responsive-nav\") {\\n            x.className += \" responsive\";\\n        } else {\\n            x.className = \"responsive-nav\";\\n        }\\n    }\\n</script>\\n\\n<div class=\"responsive-nav\" id=\"myTopnav\">\\n  <a href=\"#home\" class=\"active\">Home</a>\\n  <a href=\"#news\">News</a>\\n  <a href=\"#contact\">Contact</a>\\n  <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"toggleNav()\">\\n    &#9776; <!-- Hamburger Icon -->\\n  </a>\\n</div>\\n"
+    },
+    {
+        "name": "Product Card",
+        "category": "Components",
+        "description": "A card component for displaying product information.",
+        "code": "<style>\\n    .product-card {\\n        width: 300px;\\n        font-family: sans-serif;\\n        border-radius: 10px;\\n        box-shadow: 0 4px 8px rgba(0,0,0,0.2);\\n        overflow: hidden;\\n        text-align: center;\\n    }\\n    .product-card img {\\n        width: 100%;\\n        height: 200px;\\n        object-fit: cover;\\n    }\\n    .product-card h3 {\\n        margin: 15px 0 10px 0;\\n    }\\n    .product-card .price {\\n        color: grey;\\n        font-size: 22px;\\n        margin-bottom: 15px;\\n    }\\n    .product-card button {\\n        border: none;\\n        outline: 0;\\n        padding: 12px;\\n        color: white;\\n        background-color: #000;\\n        text-align: center;\\n        cursor: pointer;\\n        width: 100%;\\n        font-size: 18px;\\n    }\\n    .product-card button:hover {\\n        opacity: 0.7;\\n    }\\n</style>\\n\\n<div class=\"product-card\">\\n  <img src=\"https://via.placeholder.com/300x200\" alt=\"Product\">\\n  <h3>Product Name</h3>\\n  <p class=\"price\">$19.99</p>\\n  <p><button>Add to Cart</button></p>\\n</div>"
+    },
+    {
+        "name": "Profile Card",
+        "category": "Components",
+        "description": "A card for displaying user profile information.",
+        "code": "<style>\\n    .profile-card {\\n        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\\n        max-width: 300px;\\n        margin: auto;\\n        text-align: center;\\n        font-family: arial;\\n    }\\n    .profile-card .title {\\n        color: grey;\\n        font-size: 18px;\\n    }\\n    .profile-card button {\\n        border: none;\\n        outline: 0;\\n        display: inline-block;\\n        padding: 8px;\\n        color: white;\\n        background-color: #000;\\n        text-align: center;\\n        cursor: pointer;\\n        width: 100%;\\n        font-size: 18px;\\n    }\\n</style>\\n\\n<div class=\"profile-card\">\\n  <img src=\"https://via.placeholder.com/300\" alt=\"John\" style=\"width:100%\">\\n  <h1>John Doe</h1>\\n  <p class=\"title\">CEO & Founder, Example</p>\\n  <p>Harvard University</p>\\n  <p><button>Contact</button></p>\\n</div>"
+    },
+    {
+        "name": "Login Form",
+        "category": "Components",
+        "description": "A simple login form.",
+        "code": "<style>\\n    .login-form {\\n        font-family: Arial, Helvetica, sans-serif;\\n        border: 3px solid #f1f1f1;\\n        width: 350px;\\n        padding: 16px;\\n    }\\n    .login-form input[type=text], .login-form input[type=password] {\\n        width: 100%;\\n        padding: 12px 20px;\\n        margin: 8px 0;\\n        display: inline-block;\\n        border: 1px solid #ccc;\\n        box-sizing: border-box;\\n    }\\n    .login-form button {\\n        background-color: #04AA6D;\\n        color: white;\\n        padding: 14px 20px;\\n        margin: 8px 0;\\n        border: none;\\n        cursor: pointer;\\n        width: 100%;\\n    }\\n    .login-form button:hover {\\n        opacity: 0.8;\\n    }\\n</style>\\n\\n<form class=\"login-form\">\\n  <label for=\"uname\"><b>Username</b></label>\\n  <input type=\"text\" placeholder=\"Enter Username\" name=\"uname\" required>\\n\\n  <label for=\"psw\"><b>Password</b></label>\\n  <input type=\"password\" placeholder=\"Enter Password\" name=\"psw\" required>\\n        \\n  <button type=\"submit\">Login</button>\\n</form>"
+    },
+    {
+        "name": "Search Bar",
+        "category": "Components",
+        "description": "A simple search bar with a submit button.",
+        "code": "<style>\\n    .search-bar {\\n        display: flex;\\n    }\\n    .search-bar input[type=text] {\\n        padding: 10px;\\n        font-size: 17px;\\n        border: 1px solid grey;\\n        flex: 1;\\n        background: #f1f1f1;\\n    }\\n    .search-bar button {\\n        padding: 10px;\\n        background: #2196F3;\\n        color: white;\\n        font-size: 17px;\\n        border: 1px solid grey;\\n        border-left: none;\\n        cursor: pointer;\\n    }\\n    .search-bar button:hover {\\n        background: #0b7dda;\\n    }\\n</style>\\n\\n<div class=\"search-bar\">\\n  <input type=\"text\" placeholder=\"Search..\">\\n  <button type=\"submit\">Go</button>\\n</div>"
+    },
+    {
+        "name": "Simple Modal",
+        "category": "Components",
+        "description": "A basic modal/popup box that can be opened and closed.",
+        "code": "<style>\\n    .modal {\\n        display: none; /* Hidden by default */\\n        position: fixed;\\n        z-index: 1;\\n        left: 0;\\n        top: 0;\\n        width: 100%;\\n        height: 100%;\\n        overflow: auto;\\n        background-color: rgba(0,0,0,0.4);\\n    }\\n    .modal-content {\\n        background-color: #fefefe;\\n        margin: 15% auto;\\n        padding: 20px;\\n        border: 1px solid #888;\\n        width: 80%;\\n    }\\n    .close-btn {\\n        color: #aaa;\\n        float: right;\\n        font-size: 28px;\\n        font-weight: bold;\\n        cursor: pointer;\\n    }\\n</style>\\n<script>\\n    var modal = document.getElementById(\"myModal\");\\n    var btn = document.getElementById(\"myBtn\");\\n    var span = document.getElementsByClassName(\"close-btn\")[0];\\n\\n    btn.onclick = function() { modal.style.display = \"block\"; }\\n    span.onclick = function() { modal.style.display = \"none\"; }\\n    window.onclick = function(event) {\\n        if (event.target == modal) {\\n            modal.style.display = \"none\";\\n        }\\n    }\\n</script>\\n\\n<button id=\"myBtn\">Open Modal</button>\\n\\n<div id=\"myModal\" class=\"modal\">\\n  <div class=\"modal-content\">\\n    <span class=\"close-btn\">&times;</span>\\n    <p>Some text in the Modal..</p>\\n  </div>\\n</div>"
+    },
+    {
+        "name": "Animated Button",
+        "category": "Components",
+        "description": "A button with a simple transition effect.",
+        "code": "<style>\\n    .animated-button {\\n        background-color: #04AA6D;\\n        border: none;\\n        color: white;\\n        padding: 16px 32px;\\n        text-align: center;\\n        font-size: 16px;\\n        margin: 4px 2px;\\n        opacity: 0.6;\\n        transition: 0.3s;\\n        display: inline-block;\\n        text-decoration: none;\\n        cursor: pointer;\\n    }\\n    .animated-button:hover {opacity: 1}\\n</style>\\n\\n<button class=\"animated-button\">Hover Over Me</button>"
+    },
+    {
+        "name": "CSS Loader",
+        "category": "Components",
+        "description": "A simple loading spinner created with CSS.",
+        "code": "<style>\\n    .loader {\\n        border: 16px solid #f3f3f3;\\n        border-radius: 50%;\\n        border-top: 16px solid #3498db;\\n        width: 120px;\\n        height: 120px;\\n        animation: spin 2s linear infinite;\\n    }\\n    @keyframes spin {\\n        0% { transform: rotate(0deg); }\\n        100% { transform: rotate(360deg); }\\n    }\\n</style>\\n\\n<div class=\"loader\"></div>"
+    },
+    {
+        "name": "Accordion",
+        "category": "Components",
+        "description": "A vertically stacked set of interactive headings that each contain a title, content snippet, or thumbnail.",
+        "code": "<style>\\n    .accordion {\\n        background-color: #eee;\\n        color: #444;\\n        cursor: pointer;\\n        padding: 18px;\\n        width: 100%;\\n        border: none;\\n        text-align: left;\\n        outline: none;\\n        font-size: 15px;\\n        transition: 0.4s;\\n    }\\n    .active, .accordion:hover {\\n        background-color: #ccc;\\n    }\\n    .panel {\\n        padding: 0 18px;\\n        background-color: white;\\n        max-height: 0;\\n        overflow: hidden;\\n        transition: max-height 0.2s ease-out;\\n    }\\n</style>\\n<script>\\n    var acc = document.getElementsByClassName(\"accordion\");\\n    for (var i = 0; i < acc.length; i++) {\\n        acc[i].addEventListener(\"click\", function() {\\n            this.classList.toggle(\"active\");\\n            var panel = this.nextElementSibling;\\n            if (panel.style.maxHeight) {\\n                panel.style.maxHeight = null;\\n            } else {\\n                panel.style.maxHeight = panel.scrollHeight + \"px\";\\n            }\\n        });\\n    }\\n</script>\\n\\n<button class=\"accordion\">Section 1</button>\\n<div class=\"panel\">\\n  <p>Lorem ipsum dolor sit amet...</p>\\n</div>\\n\\n<button class=\"accordion\">Section 2</button>\\n<div class=\"panel\">\\n  <p>Lorem ipsum dolor sit amet...</p>\\n</div>"
+    },
+    {
+        "name": "Pagination",
+        "category": "Components",
+        "description": "A set of links for navigating through pages.",
+        "code": "<style>\\n    .pagination {\\n        display: inline-block;\\n    }\\n    .pagination a {\\n        color: black;\\n        float: left;\\n        padding: 8px 16px;\\n        text-decoration: none;\\n        transition: background-color .3s;\\n        border: 1px solid #ddd;\\n    }\\n    .pagination a.active {\\n        background-color: #4CAF50;\\n        color: white;\\n        border: 1px solid #4CAF50;\\n    }\\n    .pagination a:hover:not(.active) {background-color: #ddd;}\\n</style>\\n\\n<div class=\"pagination\">\\n  <a href=\"#\">&laquo;</a>\\n  <a href=\"#\">1</a>\\n  <a href=\"#\" class=\"active\">2</a>\\n  <a href=\"#\">3</a>\\n  <a href=\"#\">&raquo;</a>\\n</div>"
+    },
+    {
+        "name": "Simple Footer",
+        "category": "Components",
+        "description": "A basic footer for a webpage.",
+        "code": "<style>\\n    .footer {\\n        background-color: #333;\\n        color: white;\\n        text-align: center;\\n        padding: 20px;\\n        font-family: sans-serif;\\n    }\\n</style>\\n\\n<div class=\"footer\">\\n  <p>&copy; 2025 Your Website. All rights reserved.</p>\\n</div>"
+    },
+    {
+        "name": "Tooltip",
+        "category": "Components",
+        "description": "A popup that displays information related to an element when the user hovers over it.",
+        "code": "<style>\\n    .tooltip {\\n        position: relative;\\n        display: inline-block;\\n        border-bottom: 1px dotted black;\\n    }\\n    .tooltip .tooltiptext {\\n        visibility: hidden;\\n        width: 120px;\\n        background-color: black;\\n        color: #fff;\\n        text-align: center;\\n        border-radius: 6px;\\n        padding: 5px 0;\\n        position: absolute;\\n        z-index: 1;\\n        bottom: 125%;\\n        left: 50%;\\n        margin-left: -60px;\\n        opacity: 0;\\n        transition: opacity 0.3s;\\n    }\\n    .tooltip:hover .tooltiptext {\\n        visibility: visible;\\n        opacity: 1;\\n    }\\n</style>\\n\\n<div class=\"tooltip\">Hover over me\\n  <span class=\"tooltiptext\">Tooltip text</span>\\n</div>"
+    },
+    {
+        "name": "Tabs",
+        "category": "Components",
+        "description": "A way to display content in a tabbed interface.",
+        "code": "<style>\\n    .tab {\\n        overflow: hidden;\\n        border: 1px solid #ccc;\\n        background-color: #f1f1f1;\\n    }\\n    .tab button {\\n        background-color: inherit;\\n        float: left;\\n        border: none;\\n        outline: none;\\n        cursor: pointer;\\n        padding: 14px 16px;\\n        transition: 0.3s;\\n    }\\n    .tab button:hover {\\n        background-color: #ddd;\\n    }\\n    .tab button.active {\\n        background-color: #ccc;\\n    }\\n    .tabcontent {\\n        display: none;\\n        padding: 6px 12px;\\n        border: 1px solid #ccc;\\n        border-top: none;\\n    }\\n</style>\\n<script>\\n    function openCity(evt, cityName) {\\n      var i, tabcontent, tablinks;\\n      tabcontent = document.getElementsByClassName(\"tabcontent\");\\n      for (i = 0; i < tabcontent.length; i++) {\\n        tabcontent[i].style.display = \"none\";\\n      }\\n      tablinks = document.getElementsByClassName(\"tablinks\");\\n      for (i = 0; i < tablinks.length; i++) {\\n        tablinks[i].className = tablinks[i].className.replace(\" active\", \"\");\\n      }\\n      document.getElementById(cityName).style.display = \"block\";\\n      evt.currentTarget.className += \" active\";\\n    }\\n    // Get the element with id=\"defaultOpen\" and click on it\\n    document.getElementById(\"defaultOpen\").click();\\n</script>\\n\\n<div class=\"tab\">\\n  <button class=\"tablinks\" onclick=\"openCity(event, 'London')\" id=\"defaultOpen\">London</button>\\n  <button class=\"tablinks\" onclick=\"openCity(event, 'Paris')\">Paris</button>\\n</div>\\n\\n<div id=\"London\" class=\"tabcontent\">\\n  <h3>London</h3>\\n  <p>London is the capital city of England.</p>\\n</div>\\n\\n<div id=\"Paris\" class=\"tabcontent\">\\n  <h3>Paris</h3>\\n  <p>Paris is the capital of France.</p> \\n</div>"
+    },
+    {
+        "name": "Alert/Notification",
+        "category": "Components",
+        "description": "A simple alert box.",
+        "code": "<style>\\n    .alert {\\n        padding: 20px;\\n        background-color: #f44336; /* Red */\\n        color: white;\\n        margin-bottom: 15px;\\n    }\\n    .alert.success {background-color: #04AA6D;}\\n    .alert.info {background-color: #2196F3;}\\n    .alert.warning {background-color: #ff9800;}\\n    .closebtn {\\n        margin-left: 15px;\\n        color: white;\\n        font-weight: bold;\\n        float: right;\\n        font-size: 22px;\\n        line-height: 20px;\\n        cursor: pointer;\\n        transition: 0.3s;\\n    }\\n    .closebtn:hover {\\n        color: black;\\n    }\\n</style>\\n<script>\\n    var close = document.getElementsByClassName(\"closebtn\");\\n    var i;\\n    for (i = 0; i < close.length; i++) {\\n      close[i].onclick = function(){\\n        var div = this.parentElement;\\n        div.style.opacity = \"0\";\\n        setTimeout(function(){ div.style.display = \"none\"; }, 600);\\n      }\\n    }\\n</script>\\n\\n<div class=\"alert\">\\n  <span class=\"closebtn\">&times;</span> \\n  <strong>Danger!</strong> Indicates a dangerous or potentially negative action.\\n</div>\\n<div class=\"alert success\">\\n  <span class=\"closebtn\">&times;</span> \\n  <strong>Success!</strong> Indicates a successful or positive action.\\n</div>"
+    },
+    {
+        "name": "Image Carousel",
+        "category": "Components",
+        "description": "A slideshow for cycling through a series of images.",
+        "code": "<style>\\n    .carousel-container {\\n        max-width: 1000px;\\n        position: relative;\\n        margin: auto;\\n    }\\n    .mySlides {\\n        display: none;\\n    }\\n    .mySlides img {\\n        width: 100%;\\n    }\\n    .prev, .next {\\n        cursor: pointer;\\n        position: absolute;\\n        top: 50%;\\n        width: auto;\\n        padding: 16px;\\n        margin-top: -22px;\\n        color: white;\\n        font-weight: bold;\\n        font-size: 18px;\\n        transition: 0.6s ease;\\n        border-radius: 0 3px 3px 0;\\n        user-select: none;\\n        background-color: rgba(0,0,0,0.5);\\n    }\\n    .next {\\n        right: 0;\\n        border-radius: 3px 0 0 3px;\\n    }\\n    .prev:hover, .next:hover {\\n        background-color: rgba(0,0,0,0.8);\\n    }\\n</style>\\n<script>\\n    let slideIndex = 1;\\n    showSlides(slideIndex);\\n\\n    function plusSlides(n) {\\n      showSlides(slideIndex += n);\\n    }\\n\\n    function showSlides(n) {\\n      let i;\\n      let slides = document.getElementsByClassName(\"mySlides\");\\n      if (n > slides.length) {slideIndex = 1}    \\n      if (n < 1) {slideIndex = slides.length}\\n      for (i = 0; i < slides.length; i++) {\\n        slides[i].style.display = \"none\";  \\n      }\\n      slides[slideIndex-1].style.display = \"block\";  \\n    }\\n</script>\\n\\n<div class=\"carousel-container\">\\n  <div class=\"mySlides\">\\n    <img src=\"https://via.placeholder.com/1000x400?text=Image+1\">\\n  </div>\\n  <div class=\"mySlides\">\\n    <img src=\"https://via.placeholder.com/1000x400?text=Image+2\">\\n  </div>\\n  <div class=\"mySlides\">\\n    <img src=\"https://via.placeholder.com/1000x400?text=Image+3\">\\n  </div>\\n  <a class=\"prev\" onclick=\"plusSlides(-1)\">&#10094;</a>\\n  <a class=\"next\" onclick=\"plusSlides(1)\">&#10095;</a>\\n</div>"
+    },
+    {
+        "name": "Progress Bar",
+        "category": "Components",
+        "description": "A simple progress bar to show completion of a task.",
+        "code": "<style>\\n    .progress-container {\\n        width: 100%;\\n        background-color: #f1f1f1;\\n    }\\n    .progress-bar {\\n        width: 1%;\\n        height: 30px;\\n        background-color: #4CAF50;\\n        text-align: center;\\n        line-height: 30px;\\n        color: white;\\n    }\\n</style>\\n<script>\\n    function move() {\\n      var elem = document.getElementById(\"myBar\");   \\n      var width = 1;\\n      var id = setInterval(frame, 10);\\n      function frame() {\\n        if (width >= 100) {\\n          clearInterval(id);\\n        } else {\\n          width++; \\n          elem.style.width = width + '%'; \\n          elem.innerHTML = width * 1  + '%';\\n        }\\n      }\\n    }\\n</script>\\n\\n<button onclick=\"move()\">Click Me</button> \\n<div class=\"progress-container\">\\n  <div class=\"progress-bar\" id=\"myBar\">1%</div>\\n</div>"
+    },
+    {
+        "name": "Breadcrumbs",
+        "category": "Components",
+        "description": "Navigation links that show the user's location in a site or app.",
+        "code": "<style>\\n    .breadcrumb {\\n        padding: 10px 16px;\\n        list-style: none;\\n        background-color: #eee;\\n    }\\n    .breadcrumb li {\\n        display: inline;\\n        font-size: 18px;\\n    }\\n    .breadcrumb li+li:before {\\n        padding: 8px;\\n        color: black;\\n        content: \"/\\\\00a0\";\\n    }\\n    .breadcrumb li a {\\n        color: #0275d8;\\n        text-decoration: none;\\n    }\\n    .breadcrumb li a:hover {\\n        color: #01447e;\\n        text-decoration: underline;\\n    }\\n</style>\\n\\n<ul class=\"breadcrumb\">\\n  <li><a href=\"#\">Home</a></li>\\n  <li><a href=\"#\">Pictures</a></li>\\n  <li><a href=\"#\">Summer 2022</a></li>\\n  <li>Italy</li>\\n</ul>"
+    },
+    {
+        "name": "Testimonial",
+        "category": "Components",
+        "description": "A block for displaying a customer testimonial.",
+        "code": "<style>\\n    .testimonial {\\n        border: 2px solid #ccc;\\n        background-color: #eee;\\n        border-radius: 5px;\\n        padding: 16px;\\n        margin: 16px 0;\\n    }\\n    .testimonial img {\\n        float: left;\\n        margin-right: 20px;\\n        border-radius: 50%;\\n    }\\n    .testimonial span {\\n        font-size: 20px;\\n        margin-right: 15px;\\n    }\\n</style>\\n\\n<div class=\"testimonial\">\\n  <img src=\"https://via.placeholder.com/80\" alt=\"Avatar\" style=\"width:90px\">\\n  <p><span>Chris Fox.</span> CEO at Mighty Schools.</p>\\n  <p>Jules saved us from a web disaster.</p>\\n</div>"
+    },
+    {
+        "name": "Pricing Table",
+        "category": "Components",
+        "description": "A table for comparing different pricing plans.",
+        "code": "<style>\\n    .columns {\\n        float: left;\\n        width: 33.3%;\\n        padding: 8px;\\n    }\\n    .price {\\n        list-style-type: none;\\n        border: 1px solid #eee;\\n        margin: 0;\\n        padding: 0;\\n        -webkit-transition: 0.3s;\\n        transition: 0.3s;\\n    }\\n    .price:hover {\\n        box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)\\n    }\\n    .price .header {\\n        background-color: #111;\\n        color: white;\\n        font-size: 25px;\\n    }\\n    .price li {\\n        border-bottom: 1px solid #eee;\\n        padding: 20px;\\n        text-align: center;\\n    }\\n    .button {\\n        background-color: #04AA6D;\\n        border: none;\\n        color: white;\\n        padding: 10px 25px;\\n        text-align: center;\\n        text-decoration: none;\\n        font-size: 18px;\\n    }\\n</style>\\n\\n<div class=\"columns\">\\n  <ul class=\"price\">\\n    <li class=\"header\">Basic</li>\\n    <li class=\"grey\">$ 9.99 / year</li>\\n    <li>10GB Storage</li>\\n    <li class=\"grey\"><a href=\"#\" class=\"button\">Sign Up</a></li>\\n  </ul>\\n</div>\\n<div class=\"columns\">\\n  <ul class=\"price\">\\n    <li class=\"header\" style=\"background-color:#04AA6D\">Pro</li>\\n    <li class=\"grey\">$ 24.99 / year</li>\\n    <li>25GB Storage</li>\\n    <li class=\"grey\"><a href=\"#\" class=\"button\">Sign Up</a></li>\\n  </ul>\\n</div>\\n<div class=\"columns\">\\n  <ul class=\"price\">\\n    <li class=\"header\">Premium</li>\\n    <li class=\"grey\">$ 49.99 / year</li>\\n    <li>50GB Storage</li>\\n    <li class=\"grey\"><a href=\"#\" class=\"button\">Sign Up</a></li>\\n  </ul>\\n</div>"
+    },
+    {
+        "name": "Contact Form",
+        "category": "Components",
+        "description": "A form for users to send messages.",
+        "code": "<style>\\n    .contact-form {\\n        max-width: 500px; margin: auto;\\n    }\\n    .contact-form input[type=text], .contact-form textarea {\\n        width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; margin-top: 6px; margin-bottom: 16px; resize: vertical;\\n    }\\n    .contact-form input[type=submit] {\\n        background-color: #04AA6D; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer;\\n    }\\n</style>\\n<div class=\"contact-form\">\\n  <form>\\n    <label for=\"fname\">First Name</label>\\n    <input type=\"text\" id=\"fname\" name=\"firstname\" placeholder=\"Your name..\">\\n    <label for=\"subject\">Subject</label>\\n    <textarea id=\"subject\" name=\"subject\" placeholder=\"Write something..\" style=\"height:200px\"></textarea>\\n    <input type=\"submit\" value=\"Submit\">\\n  </form>\\n</div>"
+    },
+    {
+        "name": "Button Group",
+        "category": "Components",
+        "description": "A group of buttons attached together.",
+        "code": "<style>\\n    .btn-group button {\\n        background-color: #04AA6D; color: white; padding: 10px 24px; cursor: pointer; float: left; border: 1px solid white;\\n    }\\n    .btn-group:after {\\n        content: \"\"; clear: both; display: table;\\n    }\\n    .btn-group button:not(:last-child) {\\n        border-right: none;\\n    }\\n    .btn-group button:hover {\\n        background-color: #3e8e41;\\n    }\\n</style>\\n<div class=\"btn-group\">\\n  <button>Apple</button>\\n  <button>Samsung</button>\\n  <button>Sony</button>\\n</div>"
+    },
+    {
+        "name": "Image Overlay Effect",
+        "category": "Components",
+        "description": "An effect to show content when hovering over an image.",
+        "code": "<style>\\n    .img-container {\\n        position: relative;\\n        width: 50%;\\n    }\\n    .image {\\n        display: block;\\n        width: 100%;\\n        height: auto;\\n    }\\n    .overlay {\\n        position: absolute;\\n        top: 0;\\n        bottom: 0;\\n        left: 0;\\n        right: 0;\\n        height: 100%;\\n        width: 100%;\\n        opacity: 0;\\n        transition: .5s ease;\\n        background-color: #008CBA;\\n    }\\n    .img-container:hover .overlay {\\n        opacity: 1;\\n    }\\n    .text {\\n        color: white;\\n        font-size: 20px;\\n        position: absolute;\\n        top: 50%;\\n        left: 50%;\\n        transform: translate(-50%, -50%);\\n    }\\n</style>\\n<div class=\"img-container\">\\n  <img src=\"https://via.placeholder.com/300\" alt=\"Avatar\" class=\"image\">\\n  <div class=\"overlay\">\\n    <div class=\"text\">Hello World</div>\\n  </div>\\n</div>"
+    },
+    {
+        "name": "Dropdown Menu",
+        "category": "Components",
+        "description": "A dropdown menu that appears on hover.",
+        "code": "<style>\\n    .dropdown {\\n        position: relative;\\n        display: inline-block;\\n    }\\n    .dropbtn {\\n        background-color: #4CAF50;\\n        color: white;\\n        padding: 16px;\\n        font-size: 16px;\\n        border: none;\\n    }\\n    .dropdown-content {\\n        display: none;\\n        position: absolute;\\n        background-color: #f9f9f9;\\n        min-width: 160px;\\n        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\\n        z-index: 1;\\n    }\\n    .dropdown-content a {\\n        color: black;\\n        padding: 12px 16px;\\n        text-decoration: none;\\n        display: block;\\n    }\\n    .dropdown-content a:hover {background-color: #f1f1f1}\\n    .dropdown:hover .dropdown-content {\\n        display: block;\\n    }\\n</style>\\n<div class=\"dropdown\">\\n  <button class=\"dropbtn\">Dropdown</button>\\n  <div class=\"dropdown-content\">\\n    <a href=\"#\">Link 1</a>\\n    <a href=\"#\">Link 2</a>\\n    <a href=\"#\">Link 3</a>\\n  </div>\\n</div>"
+    },
+    {
+        "name": "Hero Section",
+        "category": "Components",
+        "description": "An oversized banner image at the top of a webpage.",
+        "code": "<style>\\n    .hero-image {\\n        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(\"https://via.placeholder.com/1200x500\");\\n        height: 50vh;\\n        background-position: center;\\n        background-repeat: no-repeat;\\n        background-size: cover;\\n        position: relative;\\n    }\\n    .hero-text {\\n        text-align: center;\\n        position: absolute;\\n        top: 50%;\\n        left: 50%;\\n        transform: translate(-50%, -50%);\\n        color: white;\\n    }\\n</style>\\n<div class=\"hero-image\">\\n  <div class=\"hero-text\">\\n    <h1 style=\"font-size:50px\">I am Jules</h1>\\n    <p>And I'm a Software Engineer</p>\\n    <button>Hire me</button>\\n  </div>\\n</div>"
+    },
+    {
+        "name": "Cookie Consent",
+        "category": "Components",
+        "description": "A banner for cookie consent.",
+        "code": "<style>\\n    .cookie-banner {\\n        position: fixed;\\n        bottom: 0;\\n        left: 0;\\n        width: 100%;\\n        background-color: #222;\\n        color: white;\\n        padding: 15px;\\n        text-align: center;\\n        z-index: 1000;\\n    }\\n    .cookie-banner button {\\n        background-color: #4CAF50;\\n        color: white;\\n        border: none;\\n        padding: 10px 20px;\\n        cursor: pointer;\\n        margin-left: 15px;\\n    }\\n</style>\\n<div id=\"cookie-banner\" class=\"cookie-banner\">\\n    <span>This website uses cookies to ensure you get the best experience.</span>\\n    <button onclick=\"document.getElementById('cookie-banner').style.display = 'none'\">Got it!</button>\\n</div>"
+    },
+    {
+        "name": "Social Media Buttons",
+        "category": "Components",
+        "description": "Buttons with icons for social media links.",
+        "code": "<style>\\n    /* Add Font Awesome for icons */\\n    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');\\n    .fa {\\n        padding: 20px;\\n        font-size: 30px;\\n        width: 70px;\\n        text-align: center;\\n        text-decoration: none;\\n        margin: 5px 2px;\\n    }\\n    .fa:hover { opacity: 0.7; }\\n    .fa-facebook { background: #3B5998; color: white; }\\n    .fa-twitter { background: #55ACEE; color: white; }\\n</style>\\n<a href=\"#\" class=\"fa fa-facebook\"></a>\\n<a href=\"#\" class=\"fa fa-twitter\"></a>"
+    },
+    {
+        "name": "Input with Icon",
+        "category": "Components",
+        "description": "A text input field with an icon inside.",
+        "code": "<style>\\n    /* Add Font Awesome for icons */\\n    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');\\n    .input-container {\\n        display: flex;\\n        width: 100%;\\n        margin-bottom: 15px;\\n    }\\n    .icon {\\n        padding: 10px;\\n        background: dodgerblue;\\n        color: white;\\n        min-width: 50px;\\n        text-align: center;\\n    }\\n    .input-field {\\n        width: 100%;\\n        padding: 10px;\\n        outline: none;\\n    }\\n</style>\\n<div class=\"input-container\">\\n    <i class=\"fa fa-user icon\"></i>\\n    <input class=\"input-field\" type=\"text\" placeholder=\"Username\">\\n</div>"
+    },
+    {
+        "name": "Flip Card",
+        "category": "Components",
+        "description": "A card that flips on hover to reveal content on the back.",
+        "code": "<style>\\n    .flip-card {\\n        background-color: transparent;\\n        width: 300px;\\n        height: 300px;\\n        perspective: 1000px;\\n    }\\n    .flip-card-inner {\\n        position: relative;\\n        width: 100%;\\n        height: 100%;\\n        text-align: center;\\n        transition: transform 0.6s;\\n        transform-style: preserve-3d;\\n    }\\n    .flip-card:hover .flip-card-inner {\\n        transform: rotateY(180deg);\\n    }\\n    .flip-card-front, .flip-card-back {\\n        position: absolute;\\n        width: 100%;\\n        height: 100%;\\n        -webkit-backface-visibility: hidden;\\n        backface-visibility: hidden;\\n    }\\n    .flip-card-front {\\n        background-color: #bbb;\\n        color: black;\\n    }\\n    .flip-card-back {\\n        background-color: #2980b9;\\n        color: white;\\n        transform: rotateY(180deg);\\n    }\\n</style>\\n<div class=\"flip-card\">\\n  <div class=\"flip-card-inner\">\\n    <div class=\"flip-card-front\">\\n      <img src=\"https://via.placeholder.com/300\" alt=\"Avatar\" style=\"width:300px;height:300px;\">\\n    </div>\\n    <div class=\"flip-card-back\">\\n      <h1>John Doe</h1> \\n      <p>Architect & Engineer</p> \\n      <p>We love that guy!</p>\\n    </div>\\n  </div>\\n</div>"
+    },
+    {
+        "name": "Vertical Menu",
+        "category": "Components",
+        "description": "A simple vertical menu for navigation.",
+        "code": "<style>\\n    .vertical-menu {\\n        width: 200px;\\n    }\\n    .vertical-menu a {\\n        background-color: #eee;\\n        color: black;\\n        display: block;\\n        padding: 12px;\\n        text-decoration: none;\\n    }\\n    .vertical-menu a:hover {\\n        background-color: #ccc;\\n    }\\n    .vertical-menu a.active {\\n        background-color: #04AA6D;\\n        color: white;\\n    }\\n</style>\\n<div class=\"vertical-menu\">\\n  <a href=\"#\" class=\"active\">Home</a>\\n  <a href=\"#\">Link 1</a>\\n  <a href=\"#\">Link 2</a>\\n</div>"
+    }
+]

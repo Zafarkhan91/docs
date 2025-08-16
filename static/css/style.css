@@ -65,6 +65,25 @@ header h1 {
     background-color: #5dade2;
 }
 
+.username {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.auth-btn {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid white;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.auth-btn:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
 .search-container {
     position: relative;
 }

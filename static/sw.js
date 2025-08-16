@@ -2,12 +2,12 @@ const CACHE_NAME = 'dev-playground-cache-v1';
 const urlsToCache = [
     '/',
     '/index.html',
-    '/style.css',
-    '/script.js',
-    '/data/html.js',
-    '/data/css.js',
-    '/data/js.js',
-    '/data/components.js',
+    '/static/css/style.css',
+    '/static/js/script.js',
+    '/static/data/html.js',
+    '/static/data/css.js',
+    '/static/data/js.js',
+    '/static/data/components.js',
     'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.52.2/min/vs/loader.js',
     'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.52.2/min/vs/editor/editor.main.min.css'
 ];
@@ -17,7 +17,14 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME)
       .then(cache => {
         console.log('Opened cache and caching core assets');
-        return cache.addAll(urlsToCache);
+        // Add all core assets to cache.
+        // For cross-origin URLs, we need to use a Request object with no-cors mode, but that might not be cacheable.
+        // Let's try adding them directly. cdnjs should have correct CORS headers.
+        const promises = urlsToCache.map(url => {
+            const request = new Request(url, {mode: 'no-cors'});
+            return fetch(request).then(response => cache.put(request, response));
+        });
+        return Promise.all(promises);
       })
       .catch(error => {
         console.error('Failed to cache core assets:', error);
