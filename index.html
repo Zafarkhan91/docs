@@ -3,84 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ई-कॉमर्स पोर्टफोलियो</title>
-    <!-- हमारी मुख्य CSS फ़ाइल को लिंक कर रहे हैं -->
-    <link rel="stylesheet" href="style.css">
-    <!-- फॉन्ट ऑसम आइकन्स के लिए (जैसे कार्ट आइकन) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>मेरी टू-डू लिस्ट</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- ==================== हेडर सेक्शन ==================== -->
-    <!-- <header> सिमेंटिक टैग का इस्तेमाल पेज के हेडर के लिए होता है। -->
-    <header>
-        <div class="container">
-            <!-- लोगो -->
-            <a href="index.html" class="logo">मेरा स्टोर</a>
-
-            <!-- नेविगेशन मेनू -->
-            <!-- <nav> टैग नेविगेशन लिंक्स के लिए इस्तेमाल होता है। -->
-            <nav>
-                <ul>
-                    <li><a href="index.html">होम</a></li>
-                    <li><a href="products.html">प्रोडक्ट्स</a></li>
-                    <li><a href="cart.html">कार्ट <i class="fas fa-shopping-cart"></i></a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- ==================== मुख्य कंटेंट सेक्शन ==================== -->
-    <!-- <main> टैग पेज के मुख्य कंटेंट को दर्शाता है। -->
-    <main>
-        <!-- हीरो सेक्शन: वेबसाइट का मुख्य आकर्षण -->
-        <section class="hero">
-            <div class="container">
-                <h1>हमारे नए कलेक्शन में आपका स्वागत है</h1>
-                <p>गुणवत्ता और स्टाइल, जो आपको सबसे अलग बनाए।</p>
-                <a href="products.html" class="btn">अभी खरीदें</a>
+    <div class="container">
+        <div class="todo-app">
+            <h2>मेरी टू-डू लिस्ट</h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="यहाँ अपना टास्क लिखें">
+                <button onclick="addTask()">जोड़ें</button>
             </div>
-        </section>
-
-        <!-- फीचर्ड प्रोडक्ट्स सेक्शन -->
-        <section class="featured-products">
-            <div class="container">
-                <h2>फीचर्ड प्रोडक्ट्स</h2>
-                <!-- प्रोडक्ट्स का ग्रिड -->
-                <div class="product-grid">
-                    <!-- यहाँ हम कुछ प्रोडक्ट्स दिखा सकते हैं। अभी के लिए ये प्लेसहोल्डर हैं। -->
-                    <!-- प्रोडक्ट कार्ड 1 -->
-                    <div class="product-card">
-                        <img src="https://placehold.co/300x300/eee/ccc?text=Product+1" alt="प्रोडक्ट 1">
-                        <h3>स्टाइलिश टी-शर्ट</h3>
-                        <p>₹499</p>
-                    </div>
-                    <!-- प्रोडक्ट कार्ड 2 -->
-                    <div class="product-card">
-                        <img src="https://placehold.co/300x300/ddd/bbb?text=Product+2" alt="प्रोडक्ट 2">
-                        <h3>क्लासिक जूते</h3>
-                        <p>₹1999</p>
-                    </div>
-                    <!-- प्रोडक्ट कार्ड 3 -->
-                    <div class="product-card">
-                        <img src="https://placehold.co/300x300/ccc/aaa?text=Product+3" alt="प्रोडक्ट 3">
-                        <h3>ट्रेंडी घड़ी</h3>
-                        <p>₹2499</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- ==================== फुटर सेक्शन ==================== -->
-    <!-- <footer> टैग पेज के फुटर के लिए होता है। -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 मेरा स्टोर. सभी अधिकार सुरक्षित।</p>
+            <ul id="list-container">
+                <!-- Tasks will be added here by JavaScript -->
+            </ul>
         </div>
-    </footer>
-
-    <!-- जावास्क्रिप्ट फ़ाइल -->
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
